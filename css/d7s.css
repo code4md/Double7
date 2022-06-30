@@ -1,0 +1,114 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:rgb(150, 194, 146)
+}
+
+#hands {
+    display: flex;
+    flex-direction: column;
+}
+div#hands {
+    position: abssolute;
+    top: 0px;
+    left: 0px;
+    right: 320px;
+    bottom: auto;
+ 
+    width: 315px;
+}
+img {
+    padding-right: 5px;
+}
+
+#hand1  {
+     display: flex;
+     padding-top: 7px;
+     padding-left: 25px;
+     width:290px;
+     flex-wrap: wrap;
+     background-color: rgb(2, 60, 75);
+ }
+
+ #hand2  {
+    display: flex;
+    padding-top: 5px;
+    padding-left: 25px;
+    width:290px;
+    flex-wrap: wrap;
+    background-color: rgb(2, 60, 75);
+}
+div#boneyard {
+    background-color: rgb(255, 255, 255);
+    width: 320px;
+}
+
+h3 {
+    color:white;
+    text-align:center;
+    margin:3px;
+}
+#player1 {
+    border: solid 3px white;
+    background-color:rgb(6, 39, 54);
+    
+}
+
+#player2 {
+    border: solid 3px white;
+    background-color:rgb(6, 39, 54);
+
+}
+
+div#playarea {
+    position: absolute;
+    top: 0px;
+    left: 350px;
+    width: 1500px;
+    height: 1000px;
+    background-color: rgb(2, 60, 75);
+}
+#button {
+    position: absolute;
+    top:5px;
+    left: 555px;
+}
+
+p {
+    position: absolute;
+    left: 397px;
+    color: white;
+    font-weight:bold;
+    padding-top: 10px;
+    text-align:center;
+    
+}
+.invisible {
+    display: none;
+}
+#dropLocation {
+    position:absolute;
+    top: 80px;
+    left: 70px;
+    width: 1200px;
+    height: 700px;
+    border: solid 1px white;
+}
+
+.card {
+    position: relative;
+    cursor: move;
+}
+
+img {
+    height: 100px;
+    width: 80px;
+}
+
+.flipped {
+    transform: rotate(180deg);
+}
+
+
+
+
+ 
