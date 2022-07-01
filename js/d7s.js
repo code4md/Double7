@@ -54,6 +54,7 @@ function buildDeck() {
 
     function loadHands(boneYard) {
       //Enter number of players and Names
+      /*
       let number = prompt("Enter number of players from 2 to 4")
 
         if(number < 2 || number > 4) {
@@ -63,14 +64,36 @@ function buildDeck() {
           let p2Name = prompt("Enter name for PLayer 2");
           document.getElementById("player1").innerHTML = p1Name;
           document.getElementById("player2").innerHTML = p2Name;
-        
+        */
 
-        //Random sort of BoneYard array; Lopp through array and remove and deal hands
-        for (i=1; i < boneYard.length; i++) {
-            boneYard.sort(function(a,b){return 0.5 - Math.random()});
-            const cardId = 'card' + i;
-            document.getElementById(cardId).src = boneYard.shift().value.img;
-                               
+       //Initialize Player1 and Player2 Hand arrays
+        const player1Hand = [];
+        const player2Hand = [];
+       
+       //Random sort boneYard cards
+       boneYard.sort(function(a,b){return 0.5 - Math.random()});
+      
+       //Loop and deal Player1 Hand
+       for (i =1; i < 10; i++) {
+        const cardId = 'p1card' + i;
+        document.getElementById(cardId).src = boneYard[i].value.img;
+        player1Hand.push(boneYard.shift())
        }
-    }
 
+        //Loop and deal Player2 Hand
+        for (i =1; i < 10; i++) {
+          const cardId = 'p2card' + i;
+          document.getElementById(cardId).src = boneYard[i].value.img;
+          player2Hand.push(boneYard.shift())
+        }
+
+    
+
+      
+
+
+
+}
+    
+
+//loadHands(boneYard)

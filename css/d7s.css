@@ -1,6 +1,6 @@
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:rgb(150, 194, 146)
+    background-color: rgb(2, 84, 104);
 }
 
 #hands {
@@ -20,7 +20,7 @@ img {
     padding-right: 5px;
 }
 
-#hand1  {
+#player1Hand  {
      display: flex;
      padding-top: 7px;
      padding-left: 25px;
@@ -29,7 +29,7 @@ img {
      background-color: rgb(2, 60, 75);
  }
 
- #hand2  {
+ #player2Hand  {
     display: flex;
     padding-top: 5px;
     padding-left: 25px;
@@ -56,6 +56,7 @@ h3 {
 #player2 {
     border: solid 3px white;
     background-color:rgb(6, 39, 54);
+    margin-top:20px;
 
 }
 
@@ -75,7 +76,8 @@ div#playarea {
 
 p {
     position: absolute;
-    left: 397px;
+    left: 420px;
+    bottom: 160px;
     color: white;
     font-weight:bold;
     padding-top: 10px;
@@ -107,8 +109,21 @@ img {
 .flipped {
     transform: rotate(180deg);
 }
+.playArea {
+    display: flex;
+    justify-content: center;
+}
 
+.playArea h1 {
+    color: gold;
+    font-size:40px;
+    padding-right: 290px;
+    margin-top: 0px;
+}
 
+.playArea .button {
+    margin-top:50px;
+}
 
 
  
