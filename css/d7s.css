@@ -17,14 +17,14 @@ div#hands {
     width: 315px;
 }
 img {
-    padding-right: 5px;
+    margin-right: 7px;
 }
 
 #player1Hand  {
      display: flex;
      padding-top: 7px;
      padding-left: 25px;
-     width:290px;
+     width:292px;
      flex-wrap: wrap;
      background-color: rgb(2, 60, 75);
  }
@@ -33,7 +33,7 @@ img {
     display: flex;
     padding-top: 5px;
     padding-left: 25px;
-    width:290px;
+    width:292px;
     flex-wrap: wrap;
     background-color: rgb(2, 60, 75);
 }
@@ -76,7 +76,7 @@ div#playarea {
 
 p {
     position: absolute;
-    left: 420px;
+    left: 450px;
     bottom: 160px;
     color: white;
     font-weight:bold;
@@ -87,13 +87,34 @@ p {
 .invisible {
     display: none;
 }
-#dropLocation {
+#dropArea {
     position:absolute;
     top: 80px;
-    left: 70px;
-    width: 1200px;
+    left: 50px;
+    width: 1270px;
     height: 700px;
     border: solid 1px white;
+    color: #fff;
+    font-weight: bold;
+}
+#dropArea2 {
+    position:absolute;
+    top: 100px;
+    left: 50px;
+    width: 1270px;
+    height: 700px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#highCard {
+    position:absolute;
+    top: 130px;
+    left: 50px;
+    width: 1270px;
+    height: 700px;
+    color: gold;
+    font-weight: bold;
 }
 
 .card {
@@ -104,6 +125,13 @@ p {
 img {
     height: 100px;
     width: 80px;
+}
+
+.highDouble {
+    position: relative;
+    cursor: move;
+    border: 4px solid rgb(255, 0, 0);
+    opacity: 80%;
 }
 
 .flipped {

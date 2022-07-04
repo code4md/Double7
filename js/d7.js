@@ -45,12 +45,12 @@ function buildDeck() {
       const boneYard = [];
     
     //Loop through deck and add to the BoneYard array
-       for (let v = 0; v < values.length; v++) {
-        const value = values[v];
+       for (let i = 0; i < values.length; i++) {
+        const value = values[i];
         boneYard.push({value});
       }
      return boneYard;
-    }
+}
 
     function loadHands(boneYard) {
       //Enter number of players and Names
@@ -75,10 +75,10 @@ function buildDeck() {
       
        //Loop and deal Player1 Hand
        for (i =1; i < 10; i++) {
-        const cardId = 'p1card' + i;
-        document.getElementById(cardId).src = boneYard[i].value.img;
-        player1Hand.push(boneYard.shift())
-       }
+          const cardId = 'p1card' + i;
+          document.getElementById(cardId).src = boneYard[i].value.img;
+          player1Hand.push(boneYard.shift())
+        }
 
         //Loop and deal Player2 Hand
         for (i =1; i < 10; i++) {
@@ -86,14 +86,7 @@ function buildDeck() {
           document.getElementById(cardId).src = boneYard[i].value.img;
           player2Hand.push(boneYard.shift())
         }
-
-    
-
-      
-
-
-
-}
+      }
     
 
 //loadHands(boneYard)
