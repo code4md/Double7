@@ -153,5 +153,7 @@ img {
     margin-top:50px;
 }
 
-
- 
+h1 {
+    font-family: Georgia;
+    font-style: italic;
+}
