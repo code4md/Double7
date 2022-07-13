@@ -87,7 +87,7 @@ function buildDeck() {
            let dbl = a;         
            p1Doubles.push(dbl);
           }
-            player1Hand.push(boneYard.shift())
+            player1Hand.push(boneYard.shift()) //puts cards in player1's hand?
             document.getElementById("dropArea").innerHTML = "Player1 doubles : " + p1Doubles;
         }
 
