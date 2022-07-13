@@ -13,7 +13,6 @@ div#hands {
     left: 0px;
     right: 320px;
     bottom: auto;
- 
     width: 315px;
 }
 img {
@@ -64,8 +63,8 @@ div#playarea {
     position: absolute;
     top: 0px;
     left: 350px;
-    width: 150%;
-    height: 100%;
+    width: 1500px;
+    height: 1000px;
     background-color: rgb(2, 60, 75);
 }
 #button {
