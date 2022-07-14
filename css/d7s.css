@@ -8,12 +8,11 @@ body {
     flex-direction: column;
 }
 div#hands {
-    position: abssolute;
+    position: absolute;
     top: 0px;
     left: 0px;
     right: 320px;
     bottom: auto;
- 
     width: 315px;
 }
 img {
@@ -95,7 +94,7 @@ p {
     height: 700px;
     border: solid 1px white;
     color: #fff;
-    font-weight: bold;
+    font-weight: bold; 
 }
 #dropArea2 {
     position:absolute;
@@ -156,4 +155,15 @@ img {
 h1 {
     font-family: Georgia;
     font-style: italic;
+    margin-left: 150px;
+}
+
+h5 {
+    color: white;
+    margin-top: -34px;
+    text-align: center;
+    margin-right: 290px;
+    width: 500px;
+    height: 10px;
+    font-family: Georgia;
 }
