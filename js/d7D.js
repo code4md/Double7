@@ -55,7 +55,7 @@ function buildDeck() {
 
     function loadHands(boneYard) {
 
-        // Add event listner for Start button to hide when clicked
+        // Add event listener to hide start button
         const startBut = document.getElementById("startBtn");
         startBut.style.display = 'none';
 
