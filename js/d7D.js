@@ -1,3 +1,4 @@
+
 //Call and Create function to hold array of  (Hoisting)
 
 boneYard = buildDeck() 
@@ -53,6 +54,11 @@ function buildDeck() {
 }
 
     function loadHands(boneYard) {
+
+        // Add event listner for Start button to hide when clicked
+        const startBut = document.getElementById("startBtn");
+        startBut.style.display = 'none';
+
       //Enter number of players and Names
       /*
       let number = prompt("Enter number of players from 2 to 4")
@@ -112,12 +118,12 @@ function buildDeck() {
         if (max1 > max2) {
           let str = max1.toString();
           let double = max1 + str
-          document.getElementById("highCard").innerHTML = "Player1 plays first with: " + double;
+          document.getElementById("highCard").innerHTML = "Player 1 plays first with: " + double;
         }
         else {
           let str = max2.toString();
           let double = max2 + str
-          document.getElementById("highCard").innerHTML = "Player2 plays first with: " + double;
+          document.getElementById("highCard").innerHTML = "Player 2 plays first with: " + double;
         }
 
 }

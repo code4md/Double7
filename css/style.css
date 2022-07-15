@@ -67,7 +67,7 @@ div#playarea {
     height: 1000px;
     background-color: rgb(2, 60, 75);
 }
-#button {
+#startBtn {
     position: absolute;
     top:5px;
     left: 555px;
@@ -175,15 +175,21 @@ img {
 .p1Dbl {
     padding-left: 5px;
     padding-bottom: 5px;
+    width: 1070px;
+    text-align: center;
 }
 .p2Dbl {
     padding-left: 5px;
     padding-bottom: 5px;
+    width: 1070px;
+    text-align: center;
 }
 .highDbl {
     padding-left: 5px;
     padding-bottom: 5px;
     color: gold;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 26px;
+    width: 1070px;
+    text-align: center;
 }
