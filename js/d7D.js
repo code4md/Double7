@@ -55,9 +55,19 @@ function buildDeck() {
 
     function loadHands(boneYard) {
 
-        // Add event listener to hide start button
+        // Event listener to hide start button
         const startBut = document.getElementById("startBtn");
         startBut.style.display = 'none';
+
+        
+        //Event listener to hide start game text
+        const hands = document.getElementById("hands");
+        const startMsg = document.getElementById("startMsg");
+
+        hands.addEventListener('mouseover', function(e) {
+          startMsg.style.display = 'none';
+        });
+
 
       //Enter number of players and Names
       /*
@@ -94,7 +104,7 @@ function buildDeck() {
            p1Doubles.push(dbl);
           }
             player1Hand.push(boneYard.shift()) //puts cards in player1's hand?
-            document.getElementById("p1Dbl").innerHTML = "Player1 doubles : " + p1Doubles;
+            document.getElementById("p1Dbl").innerHTML = "Player 1 doubles : " + p1Doubles;
         }
 
         //Loop and deal 9 card Player2 hand
@@ -109,7 +119,7 @@ function buildDeck() {
                 p2Doubles.push(dbl);
              }
                 player2Hand.push(boneYard.shift())
-                document.getElementById("p2Dbl").innerHTML = "Player2 doubles : " + p2Doubles;
+                document.getElementById("p2Dbl").innerHTML = "Player 2 doubles : " + p2Doubles;
          }
 
         //Find the highest double and display the double and which player has it
