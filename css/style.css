@@ -6,6 +6,8 @@ body {
 #hands {
     display: flex;
     flex-direction: column;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 div#hands {
     position: absolute;
@@ -13,28 +15,27 @@ div#hands {
     left: 0px;
     right: 320px;
     bottom: auto;
-    width: 315px;
-}
-img {
-    margin-right: 7px;
+    width: 320px;
 }
 
 #player1Hand  {
      display: flex;
      padding-top: 7px;
-     padding-left: 25px;
-     width:292px;
+     padding-left: 10px;
+     width:315px;
      flex-wrap: wrap;
+     gap: 4px;
      background-color: rgb(2, 60, 75);
  }
 
  #player2Hand  {
     display: flex;
     padding-top: 5px;
-    padding-left: 25px;
-    width:292px;
+    padding-left: 10px;
+    width:315px;
     flex-wrap: wrap;
     background-color: rgb(2, 60, 75);
+    gap: 4px;
 }
 div#boneyard {
     background-color: rgb(255, 255, 255);
@@ -45,17 +46,20 @@ h3 {
     color:white;
     text-align:center;
     margin:3px;
+    padding-left: 10px;
 }
 #player1 {
     border: solid 3px white;
     background-color:rgb(6, 39, 54);
+    padding-left: 10px;
     
 }
 
 #player2 {
     border: solid 3px white;
-    background-color:rgb(6, 39, 54);
+    background-color:rgb(177, 151, 4);
     margin-top:20px;
+    padding-left: 10px;
 
 }
 
@@ -65,7 +69,7 @@ div#playarea {
     left: 350px;
     width: 1500px;
     height: 1000px;
-    background-color: rgb(2, 60, 75);
+    background-color: rgb(54, 151, 175);
 }
 #startBtn {
     position: absolute;
@@ -92,30 +96,26 @@ div#playarea {
 
 #dropArea {
     position: absolute;
-    top: 125px;
+    top: 100px;
     left: 285px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat (6, 1fr);
-    grid-auto-rows: 100px;
+    grid-auto-rows: 105px;
     grid-auto-columns:0fr;
-    width: 600px;
+    width: 480px;
     height: 600px;
     margin-bottom: 500px;
-  
 }
 
 /* Create 6x6 grid in the drop area */
 .droptarget {
-    border: 2px solid rgb(220, 221, 221);
-    opacity: 0.2;;
+    display:flex;
+    justify-content: center;
+    border: 2px solid  rgb(52, 138, 160);;
     text-align: center;
-    padding:0;
-    margin:0;
-    width: 100px;
-    height: 100px;
-    padding:0;
-    margin:0;
+    width: 102px;
+    height: 105px;
 }
 
 .card {
@@ -125,7 +125,7 @@ div#playarea {
 
 img {
     height: 100px;
-    width: 80px;
+    width: 100px;
 }
 
 .highDouble {
@@ -135,9 +135,6 @@ img {
     opacity: 80%;
 }
 
-.flipped {
-    transform: rotate(180deg);
-}
 .playArea {
     display: flex;
     justify-content: center;
@@ -179,6 +176,7 @@ img {
     color: white;
     font-size: 20px;
     padding-right: 70px;
+    margin-bottom: 0px;
 }
  
 .start p {
@@ -190,19 +188,24 @@ img {
    font-weight: bold;
    text-align: center;
 }
+.msgDiv {
+    z-index:1;
+}
 .p1Dbl {
     padding-left: 5px;
     padding-bottom: 5px;
     width: 1070px;
     text-align: center;
+    z-index:2;
 }
 .p2Dbl {
     padding-left: 5px;
     padding-bottom: 5px;
     width: 1070px;
     text-align: center;
+    z-index:2;
 }
-.highDbl {
+#highCard {
     padding-left: 5px;
     padding-bottom: 5px;
     color: gold;
@@ -210,4 +213,5 @@ img {
     font-size: 26px;
     width: 1070px;
     text-align: center;
+    z-index:2;
 }

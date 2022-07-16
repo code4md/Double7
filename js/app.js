@@ -1,4 +1,3 @@
-
 //Call and Create function to hold array of  (Hoisting)
 
 boneYard = buildDeck() 
@@ -72,7 +71,6 @@ function buildDeck() {
       //Enter number of players and Names
       /*
       let number = prompt("Enter number of players from 2 to 4")
-
         if(number < 2 || number > 4) {
             alert("Please enter a number from 2 to 4")
          }
@@ -93,7 +91,7 @@ function buildDeck() {
       
        //Loop and deal 9 card Player1 hand
        for (i =1; i < 10; i++) {
-        const cardId = 'p1card' + i;
+        const cardId = 'card' + i;
         document.getElementById(cardId).src = boneYard[i].value.img;
 
         let a = boneYard[i].value.sideA;
@@ -108,8 +106,8 @@ function buildDeck() {
         }
 
         //Loop and deal 9 card Player2 hand
-        for (i =1; i < 10; i++) {
-          const cardId = 'p2card' + i;
+        for (i =10; i < 19; i++) {
+          const cardId = 'card' + i;
           document.getElementById(cardId).src = boneYard[i].value.img;
           let a = boneYard[i].value.sideA;
           let b = boneYard[i].value.sideB;
@@ -138,4 +136,3 @@ function buildDeck() {
 
 }
     
-

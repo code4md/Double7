@@ -1,3 +1,4 @@
+
 //Call and Create function to hold array of  (Hoisting)
 
 boneYard = buildDeck() 
@@ -53,6 +54,21 @@ function buildDeck() {
 }
 
     function loadHands(boneYard) {
+
+        // Event listener to hide start button
+        const startBut = document.getElementById("startBtn");
+        startBut.style.display = 'none';
+
+        
+        //Event listener to hide start game text
+        const hands = document.getElementById("hands");
+        const startMsg = document.getElementById("startMsg");
+
+        hands.addEventListener('mouseover', function(e) {
+          startMsg.style.display = 'none';
+        });
+
+
       //Enter number of players and Names
       /*
       let number = prompt("Enter number of players from 2 to 4")
@@ -69,24 +85,57 @@ function buildDeck() {
        //Initialize Player1 and Player2 Hand arrays
         const player1Hand = [];
         const player2Hand = [];
-       
+        const p1Doubles = [];
+        const p2Doubles = [];
+
        //Random sort boneYard cards
        boneYard.sort(function(a,b){return 0.5 - Math.random()});
       
-       //Loop and deal Player1 Hand
+       //Loop and deal 9 card Player1 hand
        for (i =1; i < 10; i++) {
-          const cardId = 'p1card' + i;
-          document.getElementById(cardId).src = boneYard[i].value.img;
-          player1Hand.push(boneYard.shift())
+        const cardId = 'p1card' + i;
+        document.getElementById(cardId).src = boneYard[i].value.img;
+
+        let a = boneYard[i].value.sideA;
+        let b = boneYard[i].value.sideB;
+       
+         if (a === b) {  //Find Player1 doubles and push to an array
+           let dbl = a;         
+           p1Doubles.push(dbl);
+          }
+            player1Hand.push(boneYard.shift()) //puts cards in player1's hand?
+            document.getElementById("p1Dbl").innerHTML = "Player 1 doubles : " + p1Doubles;
         }
 
-        //Loop and deal Player2 Hand
+        //Loop and deal 9 card Player2 hand
         for (i =1; i < 10; i++) {
           const cardId = 'p2card' + i;
           document.getElementById(cardId).src = boneYard[i].value.img;
-          player2Hand.push(boneYard.shift())
+          let a = boneYard[i].value.sideA;
+          let b = boneYard[i].value.sideB;
+       
+             if (a === b) {   //Find Player2 doubles and push to an array
+                let dbl= a;
+                p2Doubles.push(dbl);
+             }
+                player2Hand.push(boneYard.shift())
+                document.getElementById("p2Dbl").innerHTML = "Player 2 doubles : " + p2Doubles;
+         }
+
+        //Find the highest double and display the double and which player has it
+        const max1 = Math.max(...p1Doubles);
+        const max2 = Math.max(...p2Doubles);
+        if (max1 > max2) {
+          let str = max1.toString();
+          let double = max1 + str
+          document.getElementById("highCard").innerHTML = "Player 1 plays first with: " + double;
         }
-      }
+        else {
+          let str = max2.toString();
+          let double = max2 + str
+          document.getElementById("highCard").innerHTML = "Player 2 plays first with: " + double;
+        }
+
+}
     
 
-//loadHands(boneYard)
