@@ -8,11 +8,12 @@ body {
     flex-direction: column;
 }
 div#hands {
-    position: absolute;
+    position: abssolute;
     top: 0px;
     left: 0px;
     right: 320px;
     bottom: auto;
+ 
     width: 315px;
 }
 img {
@@ -23,7 +24,7 @@ img {
      display: flex;
      padding-top: 7px;
      padding-left: 25px;
-     width:292px;
+     width:290px;
      flex-wrap: wrap;
      background-color: rgb(2, 60, 75);
  }
@@ -32,7 +33,7 @@ img {
     display: flex;
     padding-top: 5px;
     padding-left: 25px;
-    width:292px;
+    width:290px;
     flex-wrap: wrap;
     background-color: rgb(2, 60, 75);
 }
@@ -66,6 +67,7 @@ div#playarea {
     width: 1500px;
     height: 1000px;
     background-color: rgb(2, 60, 75);
+  
 }
 #button {
     position: absolute;
@@ -92,9 +94,8 @@ p {
     left: 50px;
     width: 1270px;
     height: 700px;
-    border: solid 1px white;
     color: #fff;
-    font-weight: bold; 
+    font-weight: bold;
 }
 #dropArea2 {
     position:absolute;
@@ -155,15 +156,22 @@ img {
 h1 {
     font-family: Georgia;
     font-style: italic;
-    margin-left: 150px;
 }
 
-h5 {
-    color: white;
-    margin-top: -34px;
-    text-align: center;
-    margin-right: 290px;
-    width: 500px;
-    height: 10px;
-    font-family: Georgia;
+.drop-zone {
+    position:auto;
+    top: auto;
+    left: 0px;
+    width: auto;
+    height: auto;
+    border: solid 2px white;
+    color: #fff;
+    font-weight: bold;
 }
+
+
+.drop-zone--over {
+    border: solid 2px rgb(0, 255, 106);
+
+}
+
