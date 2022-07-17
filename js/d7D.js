@@ -72,11 +72,11 @@ function buildDeck() {
         const p1Doubles = [];
         const p2Doubles = [];
 
-       //Random sort boneYard cards
+       //Random sort boneYard cards (What is the order of the cards after being sorted?)
        boneYard.sort(function(a,b){return 0.5 - Math.random()});
       
        //Loop and deal 9 card Player1 hand
-       for (i =1; i < 10; i++) {
+       for (i = 1; i < 10; i++) {
         const cardId = 'p1card' + i;
         document.getElementById(cardId).src = boneYard[i].value.img;
 
@@ -92,7 +92,7 @@ function buildDeck() {
         }
 
         //Loop and deal 9 card Player2 hand
-        for (i =1; i < 10; i++) {
+        for (i = 1; i < 10; i++) {
           const cardId = 'p2card' + i;
           document.getElementById(cardId).src = boneYard[i].value.img;
           let a = boneYard[i].value.sideA;
