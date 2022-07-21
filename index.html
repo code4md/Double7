@@ -10,7 +10,7 @@
   
     <div id="hands">
         <h3 id="player1">Player 1</h3>
-        <button id="boneBtn" type="button">Get a card from the boneyard</button>
+        <button id="boneBtn" onclick="getCard(p1)" type="button">Get a card from the boneyard</button>
         <div id="player1Hand">
             <div class="p1"><img src="images/vfront.png" onclick="rotateCard(1)" class="card p1" id="card1" draggable="true"></div>
             <div class="p1"><img src="images/vfront.png" onclick="rotateCard(2)" class="card p1" id="card2" draggable="true"></div>
@@ -25,7 +25,7 @@
         </div>
 
         <h3 id="player2">Player 2</h3>
-        <button id="boneBtn" type="button">Get a card from the boneyard</button>
+        <button id="boneBtn" onclick="getCard(p2)" type="button">Get a card from the boneyard</button>
         <div id="player2Hand">
             <div class="p2"><img src="images/vfront.png" onclick="rotateCard(10)" class="card p2" id="card10" draggable="true"></div>
             <div class="p2"><img src="images/vfront.png" onclick="rotateCard(11)" class="card p2" id="card11" draggable="true"></div>
