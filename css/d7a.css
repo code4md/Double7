@@ -8,12 +8,11 @@ body {
     flex-direction: column;
 }
 div#hands {
-    position: abssolute;
+    position: absolute;
     top: 0px;
     left: 0px;
     right: 320px;
     bottom: auto;
- 
     width: 315px;
 }
 img {
@@ -24,7 +23,7 @@ img {
      display: flex;
      padding-top: 7px;
      padding-left: 25px;
-     width:290px;
+     width:200px;
      flex-wrap: wrap;
      background-color: rgb(2, 60, 75);
  }
@@ -33,7 +32,7 @@ img {
     display: flex;
     padding-top: 5px;
     padding-left: 25px;
-    width:290px;
+    width:200px;
     flex-wrap: wrap;
     background-color: rgb(2, 60, 75);
 }

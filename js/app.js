@@ -90,13 +90,8 @@ function buildDeck() {
        boneYard.sort(function(a,b){return 0.5 - Math.random()});
       
        //Loop and deal 9 card Player1 hand
-<<<<<<< HEAD:js/d7D.js
        for (i = 1; i < 10; i++) {
         const cardId = 'p1card' + i;
-=======
-       for (i =1; i < 10; i++) {
-        const cardId = 'card' + i;
->>>>>>> a30a865d2c2e62e6071babe82fc24455e3be2ee1:js/app.js
         document.getElementById(cardId).src = boneYard[i].value.img;
 
         let a = boneYard[i].value.sideA;
@@ -111,13 +106,8 @@ function buildDeck() {
         }
 
         //Loop and deal 9 card Player2 hand
-<<<<<<< HEAD:js/d7D.js
         for (i = 1; i < 10; i++) {
           const cardId = 'p2card' + i;
-=======
-        for (i =10; i < 19; i++) {
-          const cardId = 'card' + i;
->>>>>>> a30a865d2c2e62e6071babe82fc24455e3be2ee1:js/app.js
           document.getElementById(cardId).src = boneYard[i].value.img;
           let a = boneYard[i].value.sideA;
           let b = boneYard[i].value.sideB;

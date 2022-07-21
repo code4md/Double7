@@ -6,7 +6,7 @@ body {
 #hands {
     display: flex;
     flex-direction: column;
-    margin-left: 5px;
+    margin-left: 20px;
     margin-top: 5px;
 }
 div#hands {
@@ -22,7 +22,7 @@ div#hands {
      display: flex;
      padding-top: 7px;
      padding-left: 10px;
-     width:315px;
+     width:310px;
      flex-wrap: wrap;
      gap: 4px;
      background-color: rgb(2, 60, 75);
@@ -125,7 +125,7 @@ div#playarea {
 
 img {
     height: 100px;
-    width: 100px;
+    width: 70px;
 }
 
 .highDouble {
