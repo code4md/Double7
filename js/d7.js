@@ -104,7 +104,7 @@ function buildDeck() {
            p1Doubles.push(dbl);
           }
             player1Hand.push(boneYard.shift()) //puts cards in player1's hand?
-            document.getElementById("p1Dbl").innerHTML = "Player 1 doubles : " + p1Doubles;
+            document.getElementById("p1Dbl").innerHTML = "Player 11 doubles : " + p1Doubles;
         }
 
         //Loop and deal 9 card Player2 hand
