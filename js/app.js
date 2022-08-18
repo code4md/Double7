@@ -53,10 +53,12 @@ function buildDeck() {
 }
 
     function loadHands(boneYard) {
-
+      
         // Event listener to hide start button
         const startBut = document.getElementById("startBtn");
         startBut.style.display = 'none';
+
+        document.getElementById("startMsg").classList = "msgDiv w3-panel w3-black";
 
         
         //Event listener to hide start game text
@@ -96,7 +98,9 @@ function buildDeck() {
 
         let a = boneYard[i].value.sideA;
         let b = boneYard[i].value.sideB;
-       
+      
+      
+         
          if (a === b) {  //Find Player1 doubles and push to an array
            let dbl = a;         
            p1Doubles.push(dbl);
@@ -104,6 +108,7 @@ function buildDeck() {
             player1Hand.push(boneYard.shift()) //puts cards in player1's hand?
             document.getElementById("p1Dbl").innerHTML = "Player 1 doubles : " + p1Doubles;
         }
+
 
         //Loop and deal 9 card Player2 hand
         for (i = 10; i < 19; i++) {
@@ -127,12 +132,18 @@ function buildDeck() {
           let str = max1.toString();
           let double = max1 + str
           document.getElementById("highCard").innerHTML = "Player 1 plays first with: " + double;
+          //Create variable to indicate Player1 turn until
+          let p1Turn = true;
+         
         }
         else {
           let str = max2.toString();
           let double = max2 + str
           document.getElementById("highCard").innerHTML = "Player 2 plays first with: " + double;
-        }
-
-}
+          let p2Turn = true;
+          
+       }
+      
     
+}
+

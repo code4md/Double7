@@ -1,6 +1,12 @@
 
+  document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+    alert(event.target.src);
+  })
+  
   document.addEventListener("dragstart", function(event) {
   // The dataTransfer.setData() method sets the data type and the value of the dragged data
+    
 
     event.dataTransfer.setData("text", event.target.id);
     if (event.target.className === "card p1") {
@@ -12,20 +18,6 @@
         let hiLite = event.target.style.border;
     
     });
-
-// While dragging change the border color
-   //  document.addEventListener("drag", function(event) {
-          // Get element by ID that contains`card`
-      //const cardID = document.querySelector(`[id*="card"]`).id;
-      //cardID.style.border = "2px solid red";
-      //document.getElementById(cardID).style.border = "2px solid red";
-      //document.getElementByClassName("drag").style.border = "2px solid red";
-//});
-
-// At dragend change the card opacity
-   //   document.addEventListener("dragend", function(event) {
-       
-//});
 
 // When entering a target area change border to dotted red
        document.addEventListener("dragenter", function(event) {
@@ -60,6 +52,7 @@
 });
 
 
+
 //jQuery code to rotate image 90deg with each click event
 
 function rotateCard(x) {
@@ -68,3 +61,4 @@ function rotateCard(x) {
   $('#card'+x).data('angle', angle);
 }
 
+ 
