@@ -77,7 +77,7 @@ div#playarea {
 #startBtn {
     position: absolute;
     top:5px;
-    left: 535px;
+    left: 597px;
     margin-top: 90px;
     border: solid 3px gold;
     z-index: 1;   
@@ -94,7 +94,7 @@ div#playarea {
     justify-content: center;
     margin-top:50px;
     top: 120px;
-    left: 380px;
+    left: 435px;
     width: 450px;
     height: 170px;
     color: #fff;
@@ -105,25 +105,29 @@ div#playarea {
 #dropArea {
     position: absolute;
     top: 100px;
-    left: 285px;
+    left: 110px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat (6, 1fr);
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     grid-auto-rows: 100px;
     grid-auto-columns:0fr;
-    width: 420px;
+    width: 600px;
     height: 600px;
-    margin-bottom: 500px;
+    margin-bottom: 200px;
 }
 
 /* Create 6x6 grid in the drop area */
 .droptarget {
     display:flex;
     justify-content: center;
-    border: 2px solid  rgb(52, 138, 160);;
+    border: 2px solid  rgb(52, 138, 160);
     text-align: center;
     width: 100px;
     height: 100px;
+}
+
+.droptargetC {
+    border: 2px solid white;
 }
 
 .card {
@@ -157,7 +161,7 @@ img {
     width: 1200px;
     justify-content: center;
     
-    margin-right: 200px;
+    margin-right: 85px;
 }
 
 .start h1 {
@@ -182,7 +186,7 @@ img {
  
 .start p {
    position: auto;
-   margin-top: 670px;
+   margin-top: 770px;
    margin-right: 100px;
    text-align: center;
    color: white;
