@@ -27,6 +27,13 @@
   }
 });
 
+document.addEventListener("dragenter", function(event) {
+  // event.target.style.opacity = 1;
+        if ( event.target.className == "droptargetC" ) {
+        event.target.style.border = "2px dotted red";
+  }
+});
+
 // To allow a drop, we must prevent the default handling of the element
         document.addEventListener("dragover", function(event) {
         event.preventDefault();
@@ -39,6 +46,12 @@
   }
 });
 
+          document.addEventListener("dragleave", function(event) {
+          if ( event.target.className == "droptargetC" ) {
+          event.target.style.border = "";
+  } 
+});
+
 /* On drop append the dragged element into the drop target
 */
     document.addEventListener("drop", function(event) {
@@ -49,6 +62,16 @@
            const data = event.dataTransfer.getData("text");
            event.target.appendChild(document.getElementById(data));
   }
+});
+
+    document.addEventListener("drop", function(event) {
+    event.preventDefault();
+      if ( event.target.className == "droptargetC" ) {
+         event.target.style.border = "";
+         //event.target.style.border = hiLite;
+         const data = event.dataTransfer.getData("text");
+         event.target.appendChild(document.getElementById(data));
+}
 });
 
 
