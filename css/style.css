@@ -127,7 +127,8 @@ div#playarea {
 }
 
 .droptargetC {
-    border: 2px solid white;
+    border: 1px solid white;
+    text-align: center;
 }
 
 .card {
