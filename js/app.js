@@ -1,5 +1,10 @@
 //Call and Create function to hold array of  (Hoisting)
 
+let p1Turn = false;
+let p2Turn = false;
+let p1Pts = 0;
+let p2Pts = 0;
+
 boneYard = buildDeck() 
 
 function buildDeck() {
@@ -66,7 +71,7 @@ function buildDeck() {
         const startMsg = document.getElementById("startMsg");
 
         hands.addEventListener('mouseover', function(e) {
-          startMsg.style.display = 'none';
+          startMsg.style.visibility = "hidden";
         });
 
 
@@ -95,18 +100,19 @@ function buildDeck() {
        for (i = 1; i < 10; i++) {
         const cardId = 'card' + i;
         document.getElementById(cardId).src = boneYard[i].value.img;
-
+   
         let a = boneYard[i].value.sideA;
         let b = boneYard[i].value.sideB;
-      
-      
+        
+        
+       // alert("" + a + b); //Converts to a string
          
          if (a === b) {  //Find Player1 doubles and push to an array
            let dbl = a;         
            p1Doubles.push(dbl);
           }
             player1Hand.push(boneYard.shift()) //puts cards in player1's hand?
-            document.getElementById("p1Dbl").innerHTML = "Player 1 doubles : " + p1Doubles;
+           // document.getElementById("p1Dbl").innerHTML = "Player 1 doubles : " + p1Doubles;
         }
 
 
@@ -122,26 +128,49 @@ function buildDeck() {
                 p2Doubles.push(dbl);
              }
                 player2Hand.push(boneYard.shift())
-                document.getElementById("p2Dbl").innerHTML = "Player 2 doubles : " + p2Doubles;
+                //document.getElementById("p2Dbl").innerHTML = "Player 2 doubles : " + p2Doubles;
          }
 
         //Find the highest double and display the double and which player has it
         const max1 = Math.max(...p1Doubles);
         const max2 = Math.max(...p2Doubles);
+
         if (max1 > max2) {
+
           let str = max1.toString();
           let double = max1 + str
           document.getElementById("highCard").innerHTML = "Player 1 plays first with: " + double;
-          //Create variable to indicate Player1 turn until
-          let p1Turn = true;
          
+          //Create variable to indicate Player1 turn 
+          p1Turn = true;    
+          
+          //Get card value Side A & B of double and add total to player points
+          let cardA = max1;
+          let cardB = max1;
+          p1Pts = cardA + cardB;
+          document.getElementById("p1Points").innerHTML = p1Pts;
+          
+
+          
+          //Show pointer icon for PLayer 1 
+          document.getElementById("play1").style.visibility = "visible";
         }
         else {
+
           let str = max2.toString();
           let double = max2 + str
           document.getElementById("highCard").innerHTML = "Player 2 plays first with: " + double;
-          let p2Turn = true;
-          
+          p2Turn = true;
+
+
+          //Get card value Side A & B of double and add total to player points
+          let cardA = max2;
+          let cardB = max2;
+          p2Pts = cardA + cardB;
+          document.getElementById("p2Points").innerHTML = p2Pts;
+
+          //Show pointer icon for Player 2
+          document.getElementById("play2").style.visibility = "visible";
        }
       
     

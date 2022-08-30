@@ -10,36 +10,45 @@
 <body>
   
     <div id="hands">
-        <h3 id="player1">Player 1</h3>
-        <button id="boneBtn" onclick="getCard(p1)" type="button">Get a card from the boneyard</button>
-        <div id="player1Hand">
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(1)" class="card p1" id="card1" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(2)" class="card p1" id="card2" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(3)" class="card p1" id="card3" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(4)" class="card p1" id="card4" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(5)" class="card p1" id="card5" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(6)" class="card p1" id="card6" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(7)" class="card p1" id="card7" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(8)" class="card p1" id="card8" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(9)" class="card p1" id="card9" draggable="true"></div>
-       
-        </div>
-
-        <h3 id="player2">Player 2</h3>
-        <button id="boneBtn" onclick="getCard(p2)" type="button">Get a card from the boneyard</button>
-        <div id="player2Hand">
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(10)" class="card p2" id="card10" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(11)" class="card p2" id="card11" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(12)" class="card p2" id="card12" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(13)" class="card p2" id="card13" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(14)" class="card p2" id="card14" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(15)" class="card p2" id="card15" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(16)" class="card p2" id="card16" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(17)" class="card p2" id="card17" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(18)" class="card p2" id="card18" draggable="true"></div>
-        </div>
-
+        <div class="topHand">
+             <h3 id="player1">Player 1</h3><span id="p1Points" class="display1"></span>
+             <button class="w3-button w3-black button" id="boneBtn" onclick="getCard(p1)" type="button">Get a card from the boneyard</button>
+             <div id="player1Hand">
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(1)" class="card p1" id="card1" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(2)" class="card p1" id="card2" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(3)" class="card p1" id="card3" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(4)" class="card p1" id="card4" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(5)" class="card p1" id="card5" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(6)" class="card p1" id="card6" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(7)" class="card p1" id="card7" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(8)" class="card p1" id="card8" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(9)" class="card p1" id="card9" draggable="true"></div>
+            </div>
+         </div>
+         <div class="bottomHand">
+                <h3 id="player2">Player 2</h3><span id="p2Points" class="display2"></span>
+                <button class="w3-button w3-black button" id="boneBtn" onclick="getCard(p2)" type="button">Get a card from the boneyard</button>
+                <div id="player2Hand">
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(10)" class="card p2" id="card10" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(11)" class="card p2" id="card11" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(12)" class="card p2" id="card12" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(13)" class="card p2" id="card13" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(14)" class="card p2" id="card14" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(15)" class="card p2" id="card15" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(16)" class="card p2" id="card16" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(17)" class="card p2" id="card17" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(18)" class="card p2" id="card18" draggable="true"></div>
+                </div>
+            </div>
     </div>
+
+    <div class="icon">
+        <img src="images/pointerA.png" class="pointTo1" id="play1">
+        <img src="images/pointerA.png" class="pointTo2" id="play2">
+    </div>
+
+ 
+
 
     <div class="playArea" id="playarea">
         <div class="start">
@@ -51,8 +60,8 @@
             <br />To begin play, drop the first card in the highlighted box.</p>
 
         <div class="msgDiv w3-panel w3-black w3-hide" id="startMsg">
-            <div class="p1Dbl"   id="p1Dbl"></div>
-            <div class="p2Dbl"   id="p2Dbl"></div>
+            <!--div class="p1Dbl"   id="p1Dbl"></div>
+            <div class="p2Dbl"   id="p2Dbl"></div -->
             <div class="highDbl" id="highCard"></div>
         </div>
        
