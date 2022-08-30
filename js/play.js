@@ -71,14 +71,16 @@
             event.preventDefault();
 
             if (active == "Player 1") {
+               
 
             //PLayer 1 turn ends - hide icon  
             event.target.style.border = "solid 3px rgb(6, 39, 54)";
             icon1.style.visibility = "hidden";
             icon2.style.visibility = "visible";
-
+            document.getElementById("p1Points").innerHTML = p1Pts;
 
             } else {
+               
 
             //PLayer 2 turn ends - hide icon and show for Player1
            //document.getElementById("play2").visibility = "hidden";
@@ -86,6 +88,7 @@
             event.target.style.border = "solid 3px rgb(177, 151, 4)"; 
             icon2.style.visibility = "hidden";
             icon1.style.visibility = "visible";
+            document.getElementById("p2Points").innerHTML = p2Pts;
             }
            
             const data = event.dataTransfer.getData("text");

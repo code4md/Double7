@@ -148,7 +148,7 @@ function buildDeck() {
           let cardA = max1;
           let cardB = max1;
           p1Pts = cardA + cardB;
-          document.getElementById("p1Points").innerHTML = p1Pts;
+          //document.getElementById("p1Points").innerHTML = p1Pts;
           
 
           
@@ -167,7 +167,7 @@ function buildDeck() {
           let cardA = max2;
           let cardB = max2;
           p2Pts = cardA + cardB;
-          document.getElementById("p2Points").innerHTML = p2Pts;
+          //document.getElementById("p2Points").innerHTML = p2Pts;
 
           //Show pointer icon for Player 2
           document.getElementById("play2").style.visibility = "visible";
