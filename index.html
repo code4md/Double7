@@ -12,7 +12,7 @@
     <div id="hands">
         <div class="topHand">
              <h3 id="player1">Player 1</h3><span id="p1Points" class="display1"></span>
-             <button class="w3-button w3-black button" id="boneBtn" onclick="getCard(p1)" type="button">Get a card from the boneyard</button>
+             <button class="w3-button w3-black button" id="boneBtn" onclick="getCard(p1)" type="button">Draw from the boneyard</button>
              <div id="player1Hand">
                 <div class="p1"><img src="images/vfront.png" onclick="rotateCard(1)" class="card p1" id="card1" draggable="true"></div>
                 <div class="p1"><img src="images/vfront.png" onclick="rotateCard(2)" class="card p1" id="card2" draggable="true"></div>
@@ -27,7 +27,7 @@
          </div>
          <div class="bottomHand">
                 <h3 id="player2">Player 2</h3><span id="p2Points" class="display2"></span>
-                <button class="w3-button w3-black button" id="boneBtn" onclick="getCard(p2)" type="button">Get a card from the boneyard</button>
+                <button class="w3-button w3-black button" id="boneBtn" onclick="getCard(p2)" type="button">Draw from the boneyard</button>
                 <div id="player2Hand">
                     <div class="p2"><img src="images/vfront.png" onclick="rotateCard(10)" class="card p2" id="card10" draggable="true"></div>
                     <div class="p2"><img src="images/vfront.png" onclick="rotateCard(11)" class="card p2" id="card11" draggable="true"></div>
@@ -47,19 +47,19 @@
         <img src="images/pointerA.png" class="pointTo2" id="play2">
     </div>
 
- 
-
-
     <div class="playArea" id="playarea">
         <div class="start">
-            <h1>Double-7</h1>
+
+            <div class="w3-amber w3-panel w3-border-gold w3-round-large w3-gray playResult" id="playResult">Play Result</div>
+
+            <h1>Double-7</h1> 
             <h5>A religious "dominoes-style" card game for all ages!</h5>
             <input class="w3-button w3-black button" value="Start Game" id="startBtn" type="button" onclick="loadHands(boneYard);"></input>
             <p>Click on any card to change its orientation.
             <br />Drag and drop it where you want to play it.
             <br />To begin play, drop the first card in the highlighted box.</p>
 
-        <div class="msgDiv w3-panel w3-black w3-hide" id="startMsg">
+        <div class="msgDiv w3-panel w3-black w3-round-large w3-border-gold w3-hide" id="startMsg">
             <!--div class="p1Dbl"   id="p1Dbl"></div>
             <div class="p2Dbl"   id="p2Dbl"></div -->
             <div class="highDbl" id="highCard"></div>
@@ -149,7 +149,5 @@
     </div>
 
     <script src="js/play.js"></script>
-
- 
 </body>
 </html>

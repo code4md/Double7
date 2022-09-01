@@ -1,9 +1,18 @@
 //Call and Create function to hold array of  (Hoisting)
-
+//Set Global Variables
 let p1Turn = false;
 let p2Turn = false;
 let p1Pts = 0;
 let p2Pts = 0;
+let edgeA = 0; //Side A of current card on the board
+let edgeB = 0; //Side B of current card on the board
+let boardPts= 0;  //Number value of current card on the board
+//Initialize Player1 and Player2 Hand arrays
+const player1Hand = [];
+const player2Hand = [];
+const p1Doubles = [];
+const p2Doubles = [];
+ 
 
 boneYard = buildDeck() 
 
@@ -87,12 +96,6 @@ function buildDeck() {
           document.getElementById("player2").innerHTML = p2Name;
         */
 
-       //Initialize Player1 and Player2 Hand arrays
-        const player1Hand = [];
-        const player2Hand = [];
-        const p1Doubles = [];
-        const p2Doubles = [];
-
        //Random sort boneYard cards (What is the order of the cards after being sorted?)
        boneYard.sort(function(a,b){return 0.5 - Math.random()});
       
@@ -144,10 +147,11 @@ function buildDeck() {
           //Create variable to indicate Player1 turn 
           p1Turn = true;    
           
-          //Get card value Side A & B of double and add total to player points
-          let cardA = max1;
-          let cardB = max1;
-          p1Pts = cardA + cardB;
+          //Get card value Side A & B of double and add total to player 1 points
+          edgeA = max1;
+          edgeB = max1;
+          p1Pts = edgeA + edgeB;
+          boardPts = edgeA + edgeB;
           //document.getElementById("p1Points").innerHTML = p1Pts;
           
 
@@ -155,7 +159,7 @@ function buildDeck() {
           //Show pointer icon for PLayer 1 
           document.getElementById("play1").style.visibility = "visible";
         }
-        else {
+        else {  
 
           let str = max2.toString();
           let double = max2 + str
@@ -163,10 +167,13 @@ function buildDeck() {
           p2Turn = true;
 
 
-          //Get card value Side A & B of double and add total to player points
-          let cardA = max2;
-          let cardB = max2;
-          p2Pts = cardA + cardB;
+          //Get card value Side A & B of double and add total to player 2 points
+          edgeA = max2;
+          edgeB = max2;
+          p2Pts = edgeA + edgeB;
+          boardPts = edgeA + edgeB;
+
+          //alert(typeof max2);
           //document.getElementById("p2Points").innerHTML = p2Pts;
 
           //Show pointer icon for Player 2

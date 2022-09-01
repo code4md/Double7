@@ -126,10 +126,12 @@ div#playarea {
     background-color: rgb(54, 151, 175);
 }
 #startBtn {
+    font-weight: bold;
     position: absolute;
     top:5px;
-    left: 597px;
+    left: 590px;
     margin-top: 90px;
+    border: solid 3px gold;
     z-index: 1;   
 }
 
@@ -138,6 +140,8 @@ div#playarea {
     height: 37px;
     padding-top:5px;
     width: 100%;
+    font-weight: bold;
+    border-radius: 10px;
 }
 
 .invisible {
@@ -201,7 +205,19 @@ img {
     display: flex;
     justify-content: center;
 }
-
+.playResult {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-weight: bold;
+    font-size: 20px;
+    width: 260px;
+    height: 70px;
+    margin-left: 840px;
+    margin-top:10px;
+    border: solid 3px gold;
+    text-align:center;
+}
 .playArea h1 {
     color: gold;
     font-size:40px;
@@ -217,21 +233,21 @@ img {
     position: auto;
     width: 1200px;
     justify-content: center;
-    
     margin-right: 85px;
 }
 
 .start h1 {
-    line-height: 1;
+    line-height: .9;
     text-align: center;
     font-family: Georgia;
     font-style: italic;
     text-align: center;
-    padding-left: 210px;
+    margin-left: 470px;
+    position:absolute;
+    top:7px;  
 }
 
 .start h5 {
-    line-height: 0;
     margin-top:0;
     text-align: center;
     font-family: Georgia;
@@ -239,6 +255,9 @@ img {
     font-size: 20px;
     padding-right: 70px;
     margin-bottom: 0px;
+    position: absolute;
+    top: 50px;
+    left: 420px;
 }
  
 .start p {
@@ -252,8 +271,9 @@ img {
 }
 .msgDiv {
     z-index:1;
-    border: solid 3px rgb(255, 196, 0);
     width:430px;
+    border: solid 3px gold;
+    border-radius: 15px;
 }
 .p1Dbl {
     position: auto;
@@ -286,3 +306,4 @@ img {
     width: 1070px;
     z-index:2;
 }
+
