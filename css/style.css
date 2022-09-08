@@ -205,19 +205,41 @@ img {
     display: flex;
     justify-content: center;
 }
-.playResult {
+div .playResult {
     display:flex;
     justify-content: center;
     align-items:center;
     font-weight: bold;
     font-size: 20px;
-    width: 260px;
+    width: 630px;
     height: 70px;
-    margin-left: 840px;
+    margin-left: 740px;
     margin-top:10px;
     border: solid 3px gold;
     text-align:center;
+    margin-right: 130px;
+    padding:0;
 }
+
+.displays {
+    display: flex;
+    justify-content: center;
+}
+div .activePlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    width: 610px;
+    height: 70px;
+    margin-left: 50px;
+    margin-top:10px;
+    border: solid 3px gold;
+    text-align: center;
+    padding:0;
+}
+
 .playArea h1 {
     color: gold;
     font-size:40px;
@@ -231,9 +253,9 @@ img {
 
 .start {
     position: auto;
-    width: 1200px;
+    width: 1350px;
     justify-content: center;
-    margin-right: 85px;
+    margin-right: 80px;
 }
 
 .start h1 {
@@ -242,7 +264,7 @@ img {
     font-family: Georgia;
     font-style: italic;
     text-align: center;
-    margin-left: 470px;
+    margin-left: 537px;
     position:absolute;
     top:7px;  
 }

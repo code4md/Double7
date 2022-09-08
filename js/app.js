@@ -62,6 +62,8 @@ function buildDeck() {
        for (let i = 0; i < values.length; i++) {
         const value = values[i];
         boneYard.push({value});
+
+
       }
      return boneYard;
 }
