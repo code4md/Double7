@@ -48,6 +48,75 @@ div#hands {
      gap: 4px;
   }
 
+.topBY {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.botBY {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.eyeShow1 {
+    position: absolute;
+    left: 295px;
+    top:  248px;
+    height: 40px;
+    width: 40px;
+}
+
+.eyeHide1 {
+    position: absolute;
+    left: 295px;
+    top:  248px;
+    height: 40px;
+    width: 40px;
+    visibility: hidden;
+}
+
+.eyeShow2 {
+    position: absolute;
+    left: 295px;
+    top:  648px;
+    height: 40px;
+    width: 40px;
+}
+
+.eyeHide2 {
+    position: absolute;
+    left: 295px;
+    top:  648px;
+    height: 40px;
+    width: 40px;
+    visibility: hidden;
+}
+
+
+#player1BY  {
+    display: flex;
+    margin-top: 88px;
+    margin-left: 352px;
+    width: 290px;
+    flex-wrap: wrap;
+    gap: 4px;
+    z-index: 5;
+    position: absolute;
+    visibility: hidden;
+ }
+
+ #player2BY  {
+    display: flex;
+    margin-top: 495px;
+    margin-left: 352px;
+    width: 290px;
+    flex-wrap: wrap;
+    gap: 4px;
+    z-index: 5;
+    position: absolute;
+    visibility: hidden;
+ }
+
  #player2Hand  {
     display: flex;
     padding-top: 5px;
@@ -56,6 +125,7 @@ div#hands {
     flex-wrap: wrap;
     gap: 4px;
 }
+
 div#boneyard {
     background-color: rgb(255, 255, 255);
     width: 320px;
@@ -124,6 +194,7 @@ div#playarea {
     width: 1500px;
     height: 1000px;
     background-color: rgb(54, 151, 175);
+    z-index: 0;
 }
 #startBtn {
     font-weight: bold;
@@ -132,16 +203,28 @@ div#playarea {
     left: 590px;
     margin-top: 90px;
     border: solid 3px gold;
+    font-weight: bold;
+    border-radius: 10px;
     z-index: 1;   
+    font-weight: bold;
 }
 
-#boneBtn {
+#p1boneBtn {
     border: solid 3px gold;
     height: 37px;
     padding-top:5px;
     width: 100%;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 7px;
+}
+
+#p2boneBtn {
+    border: solid 3px gold;
+    height: 37px;
+    padding-top:5px;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 7px;
 }
 
 .invisible {
@@ -204,6 +287,7 @@ img {
 .playArea {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 div .playResult {
     display:flex;

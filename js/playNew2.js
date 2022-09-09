@@ -141,6 +141,7 @@
                 p2Pts = boardPts;
                 sideA = edgeA;
                 sideB = edgeB;
+
             //PLayer 2 turn ends - hide icon  
             event.target.style.border = "solid 3px rgb(177, 151, 4)"; 
             icon2.style.visibility = "hidden";
@@ -280,7 +281,9 @@
     });
 
 
-  
+
+
+
 //jQuery code to rotate image 90deg with each click event
 
 function rotateCard(x) {
@@ -288,5 +291,34 @@ function rotateCard(x) {
     $('#card'+x).css({'transform': 'rotate(' + angle + 'deg)'});
     $('#card'+x).data('angle', angle);
   }
+  
+  //Show/Hide function for boneyard displays
+
+function showHideBY(pBY, state) {
+    if (pBY === player1BY && state === showBtn1) {
+        document.getElementById("player1BY").style.visibility = "visible";
+        document.getElementById("showBtn1").style.visibility = "hidden";
+        document.getElementById("hideBtn1").style.visibility = "visible";
+    }     
+    else if (pBY === player1BY && state === hideBtn1) {
+        document.getElementById("player1BY").style.visibility = "hidden";
+        document.getElementById("showBtn1").style.visibility = "visible";
+        document.getElementById("hideBtn1").style.visibility = "hidden";
+    }
+    else if (pBY === player2BY && state === showBtn2) {
+        document.getElementById("player2BY").style.visibility = "visible";
+        document.getElementById("showBtn2").style.visibility = "hidden";
+        document.getElementById("hideBtn2").style.visibility = "visible";
+    }     
+    else if (pBY === player2BY && state === hideBtn2) {
+        document.getElementById("player2BY").style.visibility = "hidden";
+        document.getElementById("showBtn2").style.visibility = "visible";
+        document.getElementById("hideBtn2").style.visibility = "hidden";
+    }
+}
+
+
+    
+    
   
    
