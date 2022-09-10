@@ -39,15 +39,6 @@ div#hands {
     align-items: center;
 }
 
-#player1Hand  {
-     display: flex;
-     padding-top: 7px;
-     padding-left: 47px;
-     width:300px;
-     flex-wrap: wrap;
-     gap: 4px;
-  }
-
 .topBY {
     display: flex;
     justify-content: flex-start;
@@ -107,7 +98,7 @@ div#hands {
 
  #player2BY  {
     display: flex;
-    margin-top: 495px;
+    margin-top: 417px;
     margin-left: 352px;
     width: 290px;
     flex-wrap: wrap;
@@ -117,11 +108,22 @@ div#hands {
     visibility: hidden;
  }
 
+ #player1Hand  {
+    display: flex;
+    padding-top: 7px;
+    padding-left: 47px;
+    margin-top:35px;
+    width:300px;
+    flex-wrap: wrap;
+    gap: 4px;
+ }
+
  #player2Hand  {
     display: flex;
     padding-top: 5px;
     padding-left: 47px;
     width:300px;
+    margin-top:35px;
     flex-wrap: wrap;
     gap: 4px;
 }
@@ -210,21 +212,30 @@ div#playarea {
 }
 
 #p1boneBtn {
+    flex-direction: column;
     border: solid 3px gold;
     height: 37px;
     padding-top:5px;
-    width: 100%;
+    width: 300px;
     font-weight: bold;
     border-radius: 7px;
+    margin-top: 38px;
+    margin-left: 20px;
+    z-index:10;
+    align-items: center;
 }
 
 #p2boneBtn {
     border: solid 3px gold;
     height: 37px;
     padding-top:5px;
-    width: 100%;
+    width: 300px;
     font-weight: bold;
     border-radius: 7px;
+    margin-top: 373px;
+    margin-left: 20px;
+    z-index:10;
+    align-items: center;
 }
 
 .invisible {

@@ -12,7 +12,6 @@
     <div id="hands">
         <div class="topHand">
              <h3 id="player1">Player 1</h3><span id="p1Points" class="display1"></span>
-             <button class="w3-button w3-black button" id="p1boneBtn" onclick="drawFromBY(p1)" type="button">Draw from the boneyard</button>
              <div id="player1Hand">
                 <div class="p1"><img src="images/vfront.png" onclick="rotateCard(1)" class="card p1" id="card1" draggable="true"></div>
                 <div class="p1"><img src="images/vfront.png" onclick="rotateCard(2)" class="card p1" id="card2" draggable="true"></div>
@@ -28,7 +27,6 @@
          </div>
          <div class="bottomHand">
                 <h3 id="player2">Player 2</h3><span id="p2Points" class="display2"></span>
-                <button class="w3-button w3-black button" id="p2boneBtn" onclick="drawFromBY(p2)" type="button">Draw from the boneyard</button>
                 <div id="player2Hand">
                     <div class="p2"><img src="images/vfront.png" onclick="rotateCard(10)" class="card p2" id="card10" draggable="true"></div>
                     <div class="p2"><img src="images/vfront.png" onclick="rotateCard(11)" class="card p2" id="card11" draggable="true"></div>
@@ -51,6 +49,7 @@
 
 
     <div class="topBY">
+        <button class="w3-button w3-black button" id="p1boneBtn" onclick="drawBone(player1BY)" type="button">Draw from the boneyard</button>
         <div id="player1BY">
             <div class="p1"><img src="images/blankCard.jpg" onclick="rotateCard(1)" class="card p1" id="bone1" draggable="true"></div>
             <div class="p1"><img src="images/blankCard.jpg" onclick="rotateCard(2)" class="card p1" id="bone2" draggable="true"></div>
@@ -69,6 +68,7 @@
 
 
     <div class="botBY">
+        <button class="w3-button w3-black button" id="p2boneBtn" onclick="drawBone(player2BY)" type="button">Draw from the boneyard</button>
         <div id="player2BY">
             <div class="p2"><img src="images/blankCard.jpg" onclick="rotateCard(1)" class="card p1" id="bone10" draggable="true"></div>
             <div class="p2"><img src="images/blankCard.jpg" onclick="rotateCard(2)" class="card p1" id="bone11" draggable="true"></div>

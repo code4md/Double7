@@ -14,7 +14,10 @@
     let matchB = false;
     let cardValue = 0;
     let double = false;
-    let boneId = 0;
+    let boneId1;
+    let boneId2;
+    let by1 = 1;
+    let by2 = 10;
     
     
     const icon1 = document.getElementById("play1");
@@ -270,21 +273,15 @@
     
         }
       
-    
-     
         //Write to Current play and Board Pts displays
         function displayPts(onTheBoard) {
             document.getElementById("playResult").innerHTML = "edgeA: " + edgeA + " " + "edgeB: " + edgeB + " " + onTheBoard;
             document.getElementById("activePlay").innerHTML = "Current play: SideA: " + sideA + " " + "SideB: " + sideB;
             return;
         }
-  
+        
     });
-
-
-
-
-
+        
 //jQuery code to rotate image 90deg with each click event
 
 function rotateCard(x) {
@@ -317,6 +314,20 @@ function showHideBY(pBY, state) {
         document.getElementById("hideBtn2").style.visibility = "hidden";
     }
 }
+
+function drawBone(player) {
+   if (player === player1BY) {
+        boneId = "bone" + by1;
+        document.getElementById(boneId).src = boneYard.shift().value.img;
+        by1 ++;
+   }
+   else if (player === player2BY) {
+        boneId = "bone" + by2;
+        document.getElementById(boneId).src = boneYard.shift().value.img;
+        by2 ++;
+   }
+}
+
 
     
     
