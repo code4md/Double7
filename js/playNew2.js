@@ -14,6 +14,7 @@
     let matchB = false;
     let cardValue = 0;
     let double = false;
+    let boneId = 0;
     
     
     const icon1 = document.getElementById("play1");
@@ -316,7 +317,6 @@ function showHideBY(pBY, state) {
         document.getElementById("hideBtn2").style.visibility = "hidden";
     }
 }
-
 
     
     
