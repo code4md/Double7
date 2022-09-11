@@ -249,6 +249,7 @@ div .activePlay {
 
 .playArea .button {
     margin-top:50px;
+    resize: both;
 }
 
 .start {

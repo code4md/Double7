@@ -55,6 +55,7 @@
             }
 
             //Check if selected card can be played (matches an edge)
+    
             if (sideA === edgeA) {
                     return aa;
             }   else if (sideA === edgeB) {
@@ -66,7 +67,7 @@
             }   else {
                 alert("Card is not playable"); 
             }
-         
+        
         }
     });
 
