@@ -14,6 +14,10 @@
     let matchB = false;
     let cardValue = 0;
     let double = false;
+    let boneId1;
+    let boneId2;
+    let by1 = 1;
+    let by2 = 10;
     
     
     const icon1 = document.getElementById("play1");
@@ -142,6 +146,7 @@
                 p2Pts = boardPts;
                 sideA = edgeA;
                 sideB = edgeB;
+
             //PLayer 2 turn ends - hide icon  
             event.target.style.border = "solid 3px rgb(177, 151, 4)"; 
             icon2.style.visibility = "hidden";
@@ -269,19 +274,15 @@
     
         }
       
-    
-     
         //Write to Current play and Board Pts displays
         function displayPts(onTheBoard) {
             document.getElementById("playResult").innerHTML = "edgeA: " + edgeA + " " + "edgeB: " + edgeB + " " + onTheBoard;
             document.getElementById("activePlay").innerHTML = "Current play: SideA: " + sideA + " " + "SideB: " + sideB;
             return;
         }
-  
+        
     });
-
-
-  
+        
 //jQuery code to rotate image 90deg with each click event
 
 function rotateCard(x) {
@@ -289,5 +290,47 @@ function rotateCard(x) {
     $('#card'+x).css({'transform': 'rotate(' + angle + 'deg)'});
     $('#card'+x).data('angle', angle);
   }
+  
+  //Show/Hide function for boneyard displays
+
+function showHideBY(pBY, state) {
+    if (pBY === player1BY && state === showBtn1) {
+        document.getElementById("player1BY").style.visibility = "visible";
+        document.getElementById("showBtn1").style.visibility = "hidden";
+        document.getElementById("hideBtn1").style.visibility = "visible";
+    }     
+    else if (pBY === player1BY && state === hideBtn1) {
+        document.getElementById("player1BY").style.visibility = "hidden";
+        document.getElementById("showBtn1").style.visibility = "visible";
+        document.getElementById("hideBtn1").style.visibility = "hidden";
+    }
+    else if (pBY === player2BY && state === showBtn2) {
+        document.getElementById("player2BY").style.visibility = "visible";
+        document.getElementById("showBtn2").style.visibility = "hidden";
+        document.getElementById("hideBtn2").style.visibility = "visible";
+    }     
+    else if (pBY === player2BY && state === hideBtn2) {
+        document.getElementById("player2BY").style.visibility = "hidden";
+        document.getElementById("showBtn2").style.visibility = "visible";
+        document.getElementById("hideBtn2").style.visibility = "hidden";
+    }
+}
+
+function drawBone(player) {
+   if (player === player1BY) {
+        boneId = "bone" + by1;
+        document.getElementById(boneId).src = boneYard.shift().value.img;
+        by1 ++;
+   }
+   else if (player === player2BY) {
+        boneId = "bone" + by2;
+        document.getElementById(boneId).src = boneYard.shift().value.img;
+        by2 ++;
+   }
+}
+
+
+    
+    
   
    
