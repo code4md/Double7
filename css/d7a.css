@@ -139,6 +139,7 @@ img {
 .playArea {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .playArea h1 {
