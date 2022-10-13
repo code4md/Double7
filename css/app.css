@@ -4,16 +4,30 @@
     box-sizing: border-box;
 }
 
+.homepage {
+    display: flex;
+    flex-direction: row;
+    background-color: teal;
+    height: 700px;
+    justify-content: center;
+    font-size: 500%;
+    font-family: "Apple Chancery";
+}
+
+.image1 {
+    margin-left: 50px;
+}
 .body-text {
     display: flex;
     flex-direction: column;
     font-family: "Georgia";
     align-items: center;
     justify-content: center;
-    row-gap: 15px;
+    row-gap: 15px; 
+    color: black;
 }
 
-.body-text h4 {
+.body-text h3 {
     justify-content: center;
 }
 
@@ -53,9 +67,9 @@ list-style: none;
 }
 
 .nav-links li a.hover:not(.active) {
-    background-color: lightseagreen;
+    background-color: rgb(54, 151, 175);
 }
 
 .nav-links li a.active {
-    background-color: green;
+    background-color:rgb(2, 84, 104);
 }
