@@ -93,7 +93,7 @@ div#hands {
 
 #player1BY  {
     display: flex;
-    margin-top: 105px;
+    margin-top: 125px;
     margin-left: 352px;
     width: 290px;
     flex-wrap: wrap;
@@ -105,7 +105,7 @@ div#hands {
 
  #player2BY  {
     display: flex;
-    margin-top: 550px;
+    margin-top: 570px;
     margin-left: 352px;
     width: 290px;
     flex-wrap: wrap;
@@ -173,7 +173,7 @@ h3 {
     width: 100px;
     position: absolute;
     left: 300px;
-    top: 430px;
+    top: 460px;
     z-index:1;
     visibility: hidden;
 }

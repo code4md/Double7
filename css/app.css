@@ -24,7 +24,9 @@
     align-items: center;
     justify-content: center;
     row-gap: 15px; 
-    color: black;
+    color: white;
+    background-color: #3697AF;
+    margin-top: 35px;
 }
 
 .body-text h3 {
@@ -36,8 +38,9 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: teal;
+    background-color: rgb(2, 84, 104);
     font-family: "Georgia";
+    top: 0px;
 }
 
 .nav-links {
@@ -50,11 +53,12 @@ nav {
 list-style: none;
 }
 
-.heading {
+.heading h4 {
     color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .nav-links a {
