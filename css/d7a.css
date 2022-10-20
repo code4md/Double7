@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(2, 84, 104);
@@ -139,6 +145,7 @@ img {
 .playArea {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .playArea h1 {
