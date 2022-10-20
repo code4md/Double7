@@ -6,19 +6,20 @@
     let imgB = "0";
     let sideA = 0;
     let sideB = 0;
-    let aa = true;
-    let ab = true;
-    let ba = true;
-    let bb = true;
+    let aaMatch = true;
+    let abMatch = true;
+    let baMatch = true;
+    let bbMatch = true;
     let matchA = false;
     let matchB = false;
     let cardValue = 0;
     let double = false;
-    let boneId1;
-    let boneId2;
     let by1 = 1;
     let by2 = 10;
-    
+    let set1EdgeA;
+    let set1EdgeB;
+    let set2EdgeA;
+    let set2EdgeB;
     
     const icon1 = document.getElementById("play1");
     const icon2 = document.getElementById("play2");
@@ -53,7 +54,7 @@
             sideB = parseInt(imgB);
             boardPts= edgeA + edgeB;
 
-            //Edge Card on board s a double
+            //Edge Card on board is a double
             if (edgeA === edgeB) {   
                 double = true;   
             }
@@ -61,13 +62,13 @@
             //Check if selected card can be played (matches an edge)
     
             if (sideA === edgeA) {
-                    return aa;
+                edge(sideB, edgeB);
             }   else if (sideA === edgeB) {
-                    return ab;
+                edge(sideB, edgeA);
             }   else if (sideB === edgeA) {
-                    return ba;
+                edge(sideA, edgeB);
             }   else if (sideB === edgeB) {
-                    return bb;
+                edge(sideA, edgeA);
             }   else {
                 alert("Card is not playable"); 
             }
@@ -115,7 +116,6 @@
   
     //Code for Game Play -------------------------------------------------------------------------------
       
- 
       document.addEventListener("drop", function(event) {
         // First Card play
         if (firstCard == 1 && event.target.className == "droptargetC") {
@@ -165,9 +165,7 @@
             event.target.appendChild(document.getElementById(data));
             firstCard ++;
     
-        } else {
-
-          
+        } else {  
     
         //  Next Card being played  (firstCard > 1)  
             if (firstCard > 1 && event.target.className == "droptarget") {
@@ -189,17 +187,17 @@
 
             //Card match - check calculate scoring
 
-            if (bb) {
-                edgeA = sideA;
-                if (double) {
-                    boardPts = edgeA + edgeB * 2;
-                    displayPts(boardPts);
-                } else {
-                    double = false;
-                    boardPts = edgeA + edgeB;
-                    displayPts(boardPts);
-                }
-            }
+           // if (bb) {
+           //     edgeA = sideA;
+           //     if (double) {
+           //         boardPts = edgeA + edgeB * 2;
+           //         displayPts(boardPts);
+           //     } else {
+           //         double = false;
+           //         boardPts = edgeA + edgeB;
+          //          displayPts(boardPts);
+          //      }
+          //  }
        
 
            /* if (double && aa) {
@@ -273,11 +271,19 @@
           
     
         }
-      
+        
+
+        function edge(a, b) {
+            alert(a, b);
+        }
+
+
         //Write to Current play and Board Pts displays
         function displayPts(onTheBoard) {
-            document.getElementById("playResult").innerHTML = "edgeA: " + edgeA + " " + "edgeB: " + edgeB + " " + onTheBoard;
-            document.getElementById("activePlay").innerHTML = "Current play: SideA: " + sideA + " " + "SideB: " + sideB;
+            document.getElementById("playResult").innerHTML = "Points: " + onTheBoard;
+            document.getElementById("edge1").innerHTML = "Edge1: SideA: " + sideA + " " + "SideB: " + sideB;
+            document.getElementById("edge2").innerHTML = "Edge2: SideA: " + sideA + " " + "SideB: " + sideB;
+            
             return;
         }
         

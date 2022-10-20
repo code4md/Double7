@@ -323,7 +323,7 @@ div .playResult {
     font-weight: bold;
     font-size: 20px;
     width: 630px;
-    height: 70px;
+    height: 80px;
     margin-left: 740px;
     margin-top:10px;
     border: solid 3px gold;
@@ -334,23 +334,56 @@ div .playResult {
 
 .displays {
     display: flex;
-    justify-content: center;
+    width: 100%;
 }
-div .activePlay {
+
+.edge1 {
     display: flex;
-    justify-content: center;
+    justify-content: center;   
     align-items: center;
     font-weight: bold;
-    font-size: 20px;
-    width: 610px;
-    height: 70px;
-    margin-left: 50px;
+    font-size: 16px;
+    width: 410px;
+    height: 80px;
+    margin-left: 10px;
     margin-top:10px;
     border: solid 3px gold;
     text-align: center;
     padding:0;
 }
 
+.edge2 {
+    display: flex;
+    text-align: center;
+    position: absolute;
+    left: 1px;
+    font-weight: bold;
+    font-size: 16px;
+    width: 150px;
+    height: 80px;
+    margin-left: 255px;
+    margin-top:10px;
+    border: solid 3px gold;
+    text-align: center;
+    padding:0;
+}
+
+.sides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 1px;
+    font-weight: bold;
+    font-size: 16px;
+    width: 150px;
+    height: 80px;
+    margin-left: 255px;
+    margin-top:10px;
+    border: solid 3px gold;
+    text-align: center;
+    padding:0;
+}
 .playArea h1 {
     color: gold;
     font-size:40px;
@@ -365,9 +398,14 @@ div .activePlay {
 
 .start {
     position: auto;
+<<<<<<< HEAD
     max-width: 90%;
     justify-content: center;
     margin-right: 80px;
+=======
+    width: 1200px;
+    margin-right: 100px;
+>>>>>>> 50e23def060ddcbb1bea4d10cf9aa415e6bfc6aa
 }
 
 .start h1 {
@@ -376,7 +414,7 @@ div .activePlay {
     font-family: Georgia;
     font-style: italic;
     text-align: center;
-    margin-left: 537px;
+    margin-left: 475px;
     position:absolute;
     top:7px;  
     flex-wrap: wrap;
