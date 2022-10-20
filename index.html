@@ -1,56 +1,121 @@
 <!DOCTYPE html>
 <html>
-<head>https://github.com/code4md/Double7s
+<head>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/w3.css">
+    <script src="js/app.js" defer></script>
     <script src="js/jquery-3.6.0.js"></script>
     <title>Double7 Card Game 1.1</title>
+    <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
-  
+    <nav>
+        <div class="heading">
+            <h4>Double-7</h4>
+        </div>
+        <ul class='nav-links'>
+            <li><a class='active' href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="instructions.html">Instructions</a></li>
+            <li><a href="contact.html">ContactUs</a></li>      
+        </ul>
+    </nav>
+<div class="container">
     <div id="hands">
-        <h3 id="player1">Player 1</h3>
-        <button id="boneBtn" type="button">Get a card from the boneyard</button>
-        <div id="player1Hand">
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(1)" class="card p1" id="card1" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(2)" class="card p1" id="card2" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(3)" class="card p1" id="card3" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(4)" class="card p1" id="card4" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(5)" class="card p1" id="card5" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(6)" class="card p1" id="card6" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(7)" class="card p1" id="card7" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(8)" class="card p1" id="card8" draggable="true"></div>
-            <div class="p1"><img src="images/vfront.png" onclick="rotateCard(9)" class="card p1" id="card9" draggable="true"></div>
-       
-        </div>
+        <div class="topHand">
+             <h3 id="player1">Player 1</h3><span id="p1Points" class="display1"></span>
+             <button class="w3-button w3-black button" id="p1boneBtn" onclick="getCard(p1)" type="button">Draw from the boneyard</button>
+             <div id="player1Hand">
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(1)" class="card p1" id="card1" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(2)" class="card p1" id="card2" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(3)" class="card p1" id="card3" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(4)" class="card p1" id="card4" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(5)" class="card p1" id="card5" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(6)" class="card p1" id="card6" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(7)" class="card p1" id="card7" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(8)" class="card p1" id="card8" draggable="true"></div>
+                <div class="p1"><img src="images/vfront.png" onclick="rotateCard(9)" class="card p1" id="card9" draggable="true"></div>
+            </div>
 
-        <h3 id="player2">Player 2</h3>
-        <button id="boneBtn" type="button">Get a card from the boneyard</button>
-        <div id="player2Hand">
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(10)" class="card p2" id="card10" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(11)" class="card p2" id="card11" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(12)" class="card p2" id="card12" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(13)" class="card p2" id="card13" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(14)" class="card p2" id="card14" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(15)" class="card p2" id="card15" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(16)" class="card p2" id="card16" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(17)" class="card p2" id="card17" draggable="true"></div>
-            <div class="p2"><img src="images/vfront.png" onclick="rotateCard(18)" class="card p2" id="card18" draggable="true"></div>
-        </div>
-
+         </div>
+         <div class="bottomHand">
+                <h3 id="player2">Player 2</h3><span id="p2Points" class="display2"></span>
+                <button class="w3-button w3-black button" id="p2boneBtn" onclick="getCard(p2)" type="button">Draw from the boneyard</button>
+                <div id="player2Hand">
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(10)" class="card p2" id="card10" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(11)" class="card p2" id="card11" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(12)" class="card p2" id="card12" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(13)" class="card p2" id="card13" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(14)" class="card p2" id="card14" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(15)" class="card p2" id="card15" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(16)" class="card p2" id="card16" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(17)" class="card p2" id="card17" draggable="true"></div>
+                    <div class="p2"><img src="images/vfront.png" onclick="rotateCard(18)" class="card p2" id="card18" draggable="true"></div>
+                </div>
+            </div>
     </div>
+
+    <div class="icon">
+        <img src="images/pointerA.png" class="pointTo1" id="play1">
+        <img src="images/pointerA.png" class="pointTo2" id="play2">
+    </div>
+
+
+
+    <div class="topBY">
+        <div id="player1BY">
+            <div class="p1"><img src="images/blankCard.jpg" onclick="rotateCard(1)" class="card p1" id="bone1" draggable="true"></div>
+            <div class="p1"><img src="images/blankCard.jpg" onclick="rotateCard(2)" class="card p1" id="bone2" draggable="true"></div>
+            <div class="p1"><img src="images/blankCard.jpg" onclick="rotateCard(3)" class="card p1" id="bone3" draggable="true"></div>
+            <div class="p1"><img src="images/blankCard.jpg" onclick="rotateCard(4)" class="card p1" id="bone4" draggable="true"></div>
+            <div class="p1"><img src="images/blankCard.jpg" onclick="rotateCard(5)" class="card p1" id="bone5" draggable="true"></div>
+            <div class="p1"><img src="images/blankCard.jpg" onclick="rotateCard(6)" class="card p1" id="bone6" draggable="true"></div>
+            <div class="p1"><img src="images/blankCard.jpg" onclick="rotateCard(7)" class="card p1" id="bone7" draggable="true"></div>
+            <div class="p1"><img src="images/blankCard.jpg" onclick="rotateCard(8)" class="card p1" id="bone8" draggable="true"></div>
+            <div class="p1"><img src="images/blankCard.jpg" onclick="rotateCard(9)" class="card p1" id="bone9" draggable="true"></div>
+        </div>
+
+        <img src="images/showBY.png" onclick="showHideBY(player1BY, showBtn1);" id="showBtn1" class="w3-hover-grayscale eyeShow1">
+        <img src="images/hideBY.png" onclick="showHideBY(player1BY, hideBtn1);" id="hideBtn1" class="w3-hover-grayscale eyeHide1">
+    </div>
+
+
+    <div class="botBY">
+        <div id="player2BY">
+            <div class="p2"><img src="images/blankCard.jpg" onclick="rotateCard(1)" class="card p1" id="bone10" draggable="true"></div>
+            <div class="p2"><img src="images/blankCard.jpg" onclick="rotateCard(2)" class="card p1" id="bone11" draggable="true"></div>
+            <div class="p2"><img src="images/blankCard.jpg" onclick="rotateCard(3)" class="card p1" id="bone12" draggable="true"></div>
+            <div class="p2"><img src="images/blankCard.jpg" onclick="rotateCard(4)" class="card p1" id="bone13" draggable="true"></div>
+            <div class="p2"><img src="images/blankCard.jpg" onclick="rotateCard(5)" class="card p1" id="bone14" draggable="true"></div>
+            <div class="p2"><img src="images/blankCard.jpg" onclick="rotateCard(6)" class="card p1" id="bone15" draggable="true"></div>
+            <div class="p2"><img src="images/blankCard.jpg" onclick="rotateCard(7)" class="card p1" id="bone16" draggable="true"></div>
+            <div class="p2"><img src="images/blankCard.jpg" onclick="rotateCard(8)" class="card p1" id="bone17" draggable="true"></div>
+            <div class="p2"><img src="images/blankCard.jpg" onclick="rotateCard(9)" class="card p1" id="bone18" draggable="true"></div>
+        </div>
+
+        <img src="images/showBY.png" onclick="showHideBY(player2BY, showBtn2);" id="showBtn2" class="w3-hover-grayscale eyeShow2">
+        <img src="images/hideBY.png" onclick="showHideBY(player2BY, hideBtn2);" id="hideBtn2" class="w3-hover-grayscale eyeHide2">
+    </div>
+
 
     <div class="playArea" id="playarea">
         <div class="start">
-            <h1>Double-7</h1>
-            <h5>A religious "dominoes-style" card game for all ages!</h5>
-            <button class="button" id="startBtn" type="button" onclick="loadHands(boneYard);">Start Game</button>
-            <p>Click on any card to change its orientation.
-            <br />Drag and drop it where you want to play it.</p>
+            <div class="displays">
+                <div class="w3-text-white w3-panel w3-border-gold w3-round-large w3-gray activePlay" id="activePlay">Current play:</div>
+                <div class="w3-text-white w3-panel w3-border-gold w3-round-large w3-gray playResult" id="playResult">Play Result:</div>
+            </div>
 
-        <div class="msgDiv" id="startMsg">
-            <div class="p1Dbl"   id="p1Dbl"></div>
-            <div class="p2Dbl"   id="p2Dbl"></div>
+            <h1>Double-7</h1> 
+            <h5>A religious "dominoes-style" card game for all ages!</h5>
+            <input class="w3-button w3-black button" value="Start Game" id="startBtn" type="button" onclick="loadHands(boneYard);"></input>
+            <p>Click on any card to change its orientation.
+            <br />Drag and drop it where you want to play it.
+            <br />To begin play, drop the first card in the highlighted box.</p>
+
+        <div class="msgDiv w3-panel w3-black w3-round-large w3-border-gold w3-hide" id="startMsg">
+            <!--div class="p1Dbl"   id="p1Dbl"></div>
+            <div class="p2Dbl"   id="p2Dbl"></div -->
             <div class="highDbl" id="highCard"></div>
         </div>
        
@@ -91,13 +156,55 @@
            <div class="droptarget"></div>
            <div class="droptarget"></div>
            <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptargetC"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
+           <div class="droptarget"></div>
         </div>
 
         </div>
     </div>
 
-    <script src="js/play.js"></script>
-
- 
+    <script src="js/playNew2.js"></script>
+</div> 
 </body>
 </html>
+
+
