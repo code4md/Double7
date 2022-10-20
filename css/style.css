@@ -17,8 +17,9 @@ body {
 }
 
 .container2 {
-    display: flex;
-    width: auto; 
+    display: inline-block;
+    margin: 0px 0px 12px 30px;
+    width: calc(4vw + 30px);
 }
 
 #hands {
@@ -203,10 +204,10 @@ h3 {
 }
 
 div#playarea {
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 350px;
-    width: 1500px;
+    max-width: 75%;
     height: 1000px;
     background-color: rgb(54, 151, 175);
     z-index: 0;
@@ -277,7 +278,7 @@ div#playarea {
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: repeat(7, 1fr);
     grid-auto-rows: 100px;
-    grid-auto-columns:0fr;
+    grid-auto-columns: 0fr;
     width: 600px;
     height: 600px;
     margin-bottom: 200px;
@@ -313,6 +314,7 @@ img {
     display: flex;
     justify-content: center;
     position: relative;
+    max-width: 90%;
 }
 div .playResult {
     display:flex;
@@ -363,7 +365,7 @@ div .activePlay {
 
 .start {
     position: auto;
-    width: 1350px;
+    max-width: 90%;
     justify-content: center;
     margin-right: 80px;
 }
